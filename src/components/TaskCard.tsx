@@ -2,9 +2,27 @@ import React from 'react';
 import { CardTitle, CardHeader, CardContent, CardFooter, Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { FiClock, FiAlertTriangle, FiCheckCircle, FiXCircle } from 'react-icons/fi';
+import {  FiAlertTriangle,  } from 'react-icons/fi';
+
+
 
 const TaskCard: React.FC = () => {
+  const viewDetailsData = {
+    date: "21 Jul 2024 | 03:00 am",
+    from: "Pantry",
+    to: "Reception"
+  };
+
+  const handleViewDetails = () => {
+    const { date, from, to } = viewDetailsData;
+    alert(`Date: ${date}\nFrom: ${from}\nTo: ${to}`);
+  };
+
+  const handleNotifyStaff = () => {
+    alert("Please do the work in the given deadline");
+    // You can replace alert with any desired functionality such as sending a notification
+  };
+  
   
   return (
     <div className='p-4 md:p-8'>
@@ -50,7 +68,7 @@ const TaskCard: React.FC = () => {
               <p className="text-sm">To: Reception</p>
             </CardContent>
             <CardFooter className="flex justify-between">
-              <Button variant="ghost"><FiAlertTriangle /> Notify Staff</Button>
+            <Button variant="ghost" onClick={handleNotifyStaff}><FiAlertTriangle /> Notify Staff</Button>
               <Badge variant="secondary">20min</Badge>
             </CardFooter>
           </Card>
@@ -99,7 +117,7 @@ const TaskCard: React.FC = () => {
               <p className="text-sm">To: Reception</p>
             </CardContent>
             <CardFooter className="flex justify-between">
-              <Button variant="ghost"><FiAlertTriangle /> View Details</Button>
+              <Button variant="ghost" onClick={handleViewDetails}>View Details</Button>
               <Badge variant="secondary">1</Badge>
             </CardFooter>
           </Card>

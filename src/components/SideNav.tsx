@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { AiOutlineHome, AiOutlineDesktop, AiOutlineUsergroupAdd, AiOutlineSchedule, AiOutlineUser } from 'react-icons/ai';
 
 const SideNav = () => {
