@@ -7,7 +7,7 @@ const MainPage = () => {
   return (
     <div>
       <TopNav/>
-      <div className='row flex '>
+      <div className='row flex  flex-col lg:flex-row flex-grow '>
       <SideNav/>
       <br />
       <TaskCard/>

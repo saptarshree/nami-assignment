@@ -7,10 +7,10 @@ import { FiClock, FiAlertTriangle, FiCheckCircle, FiXCircle } from 'react-icons/
 const TaskCard: React.FC = () => {
   
   return (
-    <div>
-      <div className="flex justify-between items-center mb-4">
+    <div className='p-4 md:p-8'>
+      <div className="mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <h2 className="text-xl font-semibold">Tasks of the day</h2>
-        <div className="flex items-center">
+        <div className="sm:flex grid grid-cols-3 items-center">
           <button className="mr-2 inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
             <span className="w-6 h-6 text-gray-500 mr-3"></span>
             Not Accepted
@@ -37,10 +37,9 @@ const TaskCard: React.FC = () => {
           </button>
         </div>
       </div>
-
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div className="space-y-4">
-          <Card className="bg-[#E53E3E] text-white w-96">
+          <Card className="bg-[#E53E3E] text-white ">
             <CardHeader>
               <CardTitle>Routine Cleaning</CardTitle>
               <Badge variant="secondary">Not Accepted</Badge>
