@@ -1,0 +1,25 @@
+/* styles.css */
+.container {
+    max-width: 1200px; /* Set maximum width for better readability on larger screens */
+    margin: 0 auto; /* Center container horizontally */
+    padding: 0 20px; /* Add padding to the sides for spacing */
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Create a responsive grid with minimum width of 300px */
+    gap: 20px; /* Add gap between grid items */
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust grid for smaller screens */
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Further adjust grid for even smaller screens */
+    }
+  }
+  
